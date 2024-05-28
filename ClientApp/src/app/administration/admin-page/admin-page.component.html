@@ -1,0 +1,77 @@
+<div class="container">
+    <h1 style="color: black;">Pregled svih prijava</h1>
+    <table class="table table-hover table-bordered p-2 table-sm ">
+        <thead>
+            <tr>
+                <th scope="col">Ime i prezime</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mobiltel</th>
+                <th scope="col">Opis</th>
+                <th scope="col">Datum termina</th>
+                <th scope="col">Datum predaje zahtjeva</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let appointment of appointments"
+                [ngClass]="{'table-success': appointment.isApproved, 'table-danger': appointment.isApproved == false}"
+                (click)="openModal(appointment)" class="pointer">
+                <td>{{appointment.name}}</td>
+                <td>{{appointment.email}}</td>
+                <td>{{appointment.phoneNumber}}</td>
+                <td>{{appointment.description}}</td>
+                <td>{{appointment.date | date:'d.M.YYYY'}} </td>
+                <td>{{appointment.createdAt | date:'d.M.YYYY'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #modal>
+
+    <div class="modal-header">
+        <h4 class="modal-title">Pregled zahtjeva</h4>
+        <button type="button" class="btn-close" aria-label="Close"
+            (click)="activeModal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body mx-2">
+        <div class="container form">
+            <form [formGroup]="appointmentFrom">
+                <div class="form-group">
+                    <input formControlName="name" class="form-control" placeholder="Ime i prezime">
+                </div>
+                <div class="form-group">
+                    <input formControlName="email" type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input formControlName="phoneNumber" class="form-control" placeholder="Mobitel">
+                </div>
+                <div class="form-group">
+                    <input placeholder="Datum termina" formControlName="date" class="form-control" type="text"
+                        onfocus="(this.type='date')" onblur="(this.type='text')" />
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" formControlName="description" rows="4"
+                        placeholder="Opiši mi za koju prigodu trebaš fotkanje (portret, skupina ljudi, neka prigoda itd.). "></textarea>
+                </div>
+
+                <div class="form-group">
+                    <span>Datum predaje: {{selectedAppointment.createdAt | date:'d.M.YYYY'}} </span>
+                </div>
+                <div class="form-group">
+                    <span>Status: {{selectedAppointment.status }}</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer mx-2">
+        <button type="button" class="btn btn-outline-danger me-auto" (click)="delete()">
+            Obriši
+        </button>
+        <button type="button" class="btn btn-outline-success" (click)="approve()">
+            Prihvati
+        </button>
+        <button type="button" class="btn btn-outline-warning" (click)="decline()">
+            Odbij
+        </button>
+    </div>
+</ng-template>

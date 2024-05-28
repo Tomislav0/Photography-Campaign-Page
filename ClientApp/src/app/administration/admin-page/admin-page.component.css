@@ -1,0 +1,13 @@
+.form {
+    border: unset;
+}
+
+.table {
+    padding: 20px;
+    width: 100%;
+}
+
+h1{
+    margin-bottom: 20px;
+    color: #fff;
+}

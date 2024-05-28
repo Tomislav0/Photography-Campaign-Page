@@ -1,0 +1,210 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1 class="p-4"><img class="logo" width="75px"></h1>
+        <!-- <nav id="nav">
+            <ul>
+                <div id="">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="generic.html">Generic</a></li>
+                        <li><a href="elements.html">Elements</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a href="#">Log In</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </nav> -->
+    </header>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner hidden-element" appLazyLoad>
+            <div class="title-group">
+                <h1 class="title">Iskoristi priliku </h1>
+                <span class="title-second">besplatnog fotografiranja</span>
+            </div>
+
+            <!-- <p class="intro-text pt-text"><b>Iskoristi priliku i rezerviraj termin besplatnog
+                    fotografiranja.</b><br />
+                <span>Fotografiranje portreta (individualno), grupe ljudi, krštenja, promotivnog sadržaja ili nešto
+                    treće,
+                    predloži mi.</span>
+            </p> -->
+            <div class="banner-wrapper">
+                <div>
+                    <p class="intro-text">
+                        <span>Do </span><b>30.6. </b> <span>možeš izabrati slobodan termin unutar perioda </span><b>od
+                            1.7.
+                            do 31.7. </b> <span>stoga ne oklijevaj jer tko
+                            prvi – njegovo.</span>
+                    </p>
+                    <p class="intro-text">
+                        <i>Usluga je<b> besplatna</b>, no ako si zadovoljan/a i želiš podržati otvoren sam za
+                            <b>donacije</b>.</i>
+                    </p>
+                </div>
+                <div class="icon-wrapper">
+
+                    <ul class="icon-info">
+                        <li><i><img class="location" alt="" width="20px"></i> <span>Samo u Osijeku</span></li>
+                        <li><i><img class="assignment" alt="" width="20px"></i> <span>Prijave do 30.6.2024*</span>
+                        </li>
+                        <li><i><img class="cameras" alt="" width="20px"></i> <span>Trajanje projekta od 1.7. do
+                                31.7. 2024</span></li>
+                    </ul>
+                </div>
+                <!-- <div class="banner-button">
+                <a href="#" class="button primary">Rezerviraj termin</a>
+            </div> -->
+                <div>
+                    <a href="#three">
+                        <div class="submit-button">
+                            <button class="btn btn-primary px-4  me-1">Rezerviraj
+                                termin</button>
+                        </div>
+                    </a>
+
+                    <p class="intro-text text-opacity">
+                        <i>*Ako ostane slobodnih termina, prijave ostaju otvorene i u 7. mjesecu</i>
+                    </p>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- <a href="#one" class="more scrolly">Learn More</a> -->
+    </section>
+
+
+    <!-- Two -->
+    <section id="two" class="wrapper alt style2">
+        <section class="spotlight s-1">
+            <div class="content hidden-element" appLazyLoad>
+                <h2>Tko sam ja i zašto želim tvoje fotke?</h2>
+                <p class="text-opacity omeni-margin">Ja sam Tomislav, student 2. godine diplomskog studija Računarstva.
+                    Ljubav
+                    prema fotografiji seže još iz djetinjstva kad sam uzeo u ruke obiteljski fotoaparat te pofotkao
+                    jednu gusjenicu koja je pozirala na toplom ljetnom betonu. </p>
+
+                <p class="text-opacity omeni-margin">Svoj prvi fotoaparat sam nabavio prije pune 3 godine i tu kreće
+                    moja „ozbiljnija“ avantura s fotografijom. </p>
+
+                <p class="text-opacity omeni-margin">Obično fotografiram portrete, ljude na pozornici, ma fotkam što
+                    god mi upadne u oko! <a target="_blank" href="https://www.tomislavkovacevic.com">Galerija</a> je tu,
+                    nemam ti ja što puno pričati, sam/a prosudi!</p>
+            </div>
+            <div class="image ja hidden-element" appLazyLoad><img class="izrezan" alt="" /></div>
+
+        </section>
+
+        <section class="spotlight s-2">
+            <div class="content hidden-element" appLazyLoad>
+                <h2>E sad, zašto ovaj projekt?</h2>
+                <p class="text-opacity  omeni-margin">Kroz ovaj projekt želim fotografirati što više različitih
+                    ljudi. Dosad sam najčešće fotografirao prijatelje i poznanike, stoga želim proširiti svoje
+                    iskustvo s osobama koje mi nisu tako bliske. </p>
+
+                <p class="text-opacity omeni-margin">Svi su dobrodošli bez obzira na svoju osobnost – od
+                    najekstravagantnijih koji su pred objektivom kao da su sami u sobi, do onih
+                    sramežljivih.</p>
+
+                <p class="text-opacity omeni-margin">Želim zabilježiti različite izraze, emocije i osobnosti kroz
+                    svoje fotografije te stvoriti inspirativnu kolekciju koja će prikazati bogatstvo ljudske
+                    raznolikosti.</p>
+            </div>
+            <div class="image hidden-element" appLazyLoad><img id="fotkeimg" class="fotke" alt="" /></div>
+
+        </section>
+    </section>
+    <!-- Three -->
+    <section id="three" class="wrapper style3 special">
+        <div class="form-wrapper">
+
+            <div class="container form hidden-element" appLazyLoad>
+                <h2 class="form-title">Rezerviraj svoj termin</h2>
+                <form [formGroup]="appointmentFrom" class="hidden-element" appLazyLoad>
+                    <div class="form-group">
+                        <input formControlName="name" class="form-control" placeholder="Ime i prezime">
+                    </div>
+                    <div class="form-group">
+                        <input formControlName="email" type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input formControlName="phoneNumber" class="form-control" placeholder="Mobitel">
+                    </div>
+                    <div class="form-group">
+                        <mat-form-field class="form-control" appearance="fill" (click)="picker.open()">
+                            <mat-label>Datum termina</mat-label>
+                            <input matInput [matDatepickerFilter]="myFilter" [min]="minDate" [max]="maxDate" [matDatepicker]="picker" formControlName="date" [disabled]="true">
+                            <mat-datepicker-toggle matIconSuffix [for]="picker">
+                              <mat-icon style="color: black; box-shadow: none;"matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #picker [dateClass]="dateClass"></mat-datepicker>
+                          </mat-form-field>
+                    </div>
+                    
+                      
+                    <div class="form-group">
+                        <textarea class="form-control" formControlName="description" rows="4"
+                            placeholder="Opiši mi za koju prigodu trebaš fotografiranje (portret, skupina ljudi, djevojačko veče itd.). "></textarea>
+                    </div>
+                    <div class="submit-button">
+                        <button type="submit" class="btn btn-primary p-2 mt-4 me-1 w-100" (click)="submit()">Rezerviraj
+                            termin</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="wrapper style4 ">
+        <div class=" hidden-element" appLazyLoad>
+            <h2>I dalje si u dvojbi?</h2>
+            <p>Posjeti moju službenu stranicu na kojoj se nalazi galerija fotografija.</p>
+            <div><a href="https://www.tomislavkovacevic.com" target="_blank" class="button fit">Posjeti galeriju</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <section>
+            <h2 style="text-align: center;">Kontakti</h2>
+            <div style="display: flex; justify-content: center;">
+                <dl class="alt">
+                    <dt>Adresa</dt>
+                    <dd>31000 Osijek &bull; Hrvatska</dd>
+                    <dt>Mobitel</dt>
+                    <dd>(+035) 996963439</dd>
+                    <dt>Email</dt>
+                    <dd><a href="#">info@tomislavkovacevic.com</a></dd>
+                </dl>
+            </div>
+
+            <ul class="icons">
+                <li>
+                    <a href="https://www.facebook.com/to.my.357/" class="icon brands fa-facebook-f alt"><span
+                            class="label">Facebook</span></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/fotomi__/" class="icon brands fa-instagram alt"><span
+                            class="label">Instagram</span></a>
+                </li>
+                <li>
+                    <a href="https://github.com/Tomislav0" class="icon brands fa-github alt"><span
+                            class="label">GitHub</span></a>
+                </li>
+            </ul>
+            <p class="copyright">
+                &copy; Tomislav Kovačević
+            </p>
+        </section>
+    </footer>
+
+</div>

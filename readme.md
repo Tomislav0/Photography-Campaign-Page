@@ -1,3 +1,4 @@
+Page that represents one month of free photography services
 ### Visit in the browser
 
 To visit the application in the browser, go to [https://photo.tomislavkovacevic.com/](https://photo.tomislavkovacevic.com/)

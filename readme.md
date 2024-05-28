@@ -1,6 +1,3 @@
-
-This app is created for my personal campaign to promote my work style to my local area.
-
 ### Visit in the browser
 
 To visit the application in the browser, go to [https://photo.tomislavkovacevic.com/](https://photo.tomislavkovacevic.com/)
